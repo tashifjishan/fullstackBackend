@@ -16,7 +16,7 @@ app.post("/login", (req, res) => {
         const { email, password } = req.body
         fs.readFile("./data/users.json", (err, data) => {
             if (err) {
-                res.status(500).json({ status: "FAIL", message: "Something went wrong!" })
+                res.status(500).json({ status: "FAIL", message: err.message })
             } else {
                 const users = JSON.parse(data)
                 const userExists = users.find(user => user.email === email && user.password === password)
@@ -29,7 +29,8 @@ app.post("/login", (req, res) => {
 
         })
     } catch (error) {
-        res.status(500).json({status: "Error", message: "Something went wrong!"})
+        res.status(500).json({status: "Error", message: error.message})
+        
     }
 
 })
