@@ -4,6 +4,9 @@ const app = express()
 const cors = require("cors")
 app.use(express.json())
 app.use(cors())
+app.get("/", (req, res)=>{
+    res.status(200).json({status: "OK", message: "Welcome!"})
+})
 app.post("/login", (req, res) => {
     try {
         const { email, password } = req.body
