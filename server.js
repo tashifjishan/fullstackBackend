@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(cors())
 app.get("/", (req, res)=>{
     try {
-        res.status(200).json({status: "OK", message: "Welcome there!"})
+        res.status(200).json({status: "OK", message: "Welcome there everybody!"})
     } catch (error) {
         res.status(500).json({status: "ERROR", message: "something went wrong!"})
     }
