@@ -5,7 +5,11 @@ const cors = require("cors")
 app.use(express.json())
 app.use(cors())
 app.get("/", (req, res)=>{
-    res.status(200).json({status: "OK", message: "Welcome!"})
+    try {
+        res.status(200).json({status: "OK", message: "Welcome!"})
+    } catch (error) {
+        res.status(500).json({status: "ERROR", message: "something went wrong!"})
+    }
 })
 app.post("/login", (req, res) => {
     try {
