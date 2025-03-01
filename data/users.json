@@ -1,0 +1,20 @@
+[
+    {
+        "email": "tashif@gmail.com",
+        "password": "12345678",
+        "todoList": [
+            "Have to pet my cat",
+            "Have to host this"
+        ]
+    },
+    {
+        "email": "jishan@gmail.com",
+        "password": "12345678",
+        "todoList": [
+            "Have to host this",
+            "This was added from the frontend!",
+            "hello there",
+            "this is another addition"
+        ]
+    }
+]
